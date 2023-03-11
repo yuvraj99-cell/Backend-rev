@@ -7,3 +7,4 @@ const txt=fs.readFileSync('demo.txt', 'utf8');
 
 console.log(txt);
 console.log(lib.sum(4,5),lib.diff(8,6));
+console.log(lib.sum(4,5),lib.diff());
