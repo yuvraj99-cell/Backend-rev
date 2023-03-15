@@ -1,3 +1,23 @@
 {
-    "type":"commonjs"
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvraj99-cell/Backend-rev.git"
+  },
+  "author": "yuvraj yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuvraj99-cell/Backend-rev/issues"
+  },
+  "homepage": "https://github.com/yuvraj99-cell/Backend-rev#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
