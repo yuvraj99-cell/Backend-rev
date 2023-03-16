@@ -1,25 +1,19 @@
-const lib= require("./lib.js");
+const http= require('http');
+const fs= require('fs');
 
-const express=require('express');
+const index=fs.readFileSync('index.html','utf-8')
+const data=fs.readFileSync('data.json','utf-8')
 
-console.log('hello world');
-const server=express();
+//const data = {age:5};
+
+const server = http.createServer((req,res)=>{
+
+    console.log(req.url);
+    console.log("server Started");
+    res.setHeader("Dummy",'DummyValue');
+    res.setHeader('Content-Type', 'text/html')
+  //  res.setHeader("Content-type",'application/json');
+    res.end(index);
+})
 
 server.listen(8080);
-
-
-
-
-
-
-//import {sum,diff} from "./lib.js";
-
-// const fs = require("fs");
-
-// const txt=fs.readFile('demo.txt', 'utf8',(err,txt)=>{
-
-//     console.log(txt);
-// });
-
-// console.log(lib.sum(4,5),lib.diff(8,6));
-// console.log(lib.sum(4,5),lib.diff());
